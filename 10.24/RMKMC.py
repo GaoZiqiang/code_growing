@@ -1,5 +1,3 @@
-# Author: Shizhe Liang
-# Last modified: 9/28/20
 # This algorithm is based on Cai, Nie and Huang's paper "Multi-view K-Means Clustering on Big Data (2013)".
 from __future__ import absolute_import
 
