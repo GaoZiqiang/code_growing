@@ -1,0 +1,8 @@
+今天学习了将训练过程的日志写入到文件中的一个方法，具体细节还没有搞清楚哈哈哈哈。
+
+简要概述如下：
+1 写工具类util/Logger.py
+2 在主类中调用，记住是要在“要打印信息”的类中
+比如，在RMKMCplus这个多视图聚类算法中，我要在RMKMC类的这个 RMKMC(Xs, k, gamma, n_iter = 300, initialization = "rand")方法中调用Logger工具类
+# 输出log到文件中
+sys.stdout = Logger(osp.join('./log', 'log_train.txt'))
