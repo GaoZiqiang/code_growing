@@ -7,10 +7,14 @@ else:
     root = 0
     while pwr < 6:
         while root*pwr < num:
-            root = root + 1
-        pwr = pwr + 1
+            root = root + 1# 当root*pwr的条件满足时外层while并不能及时退出，会造成一些浪费
+        if pwr > 0 and pwr < 6 and root*pwr == num:
+            print('root=',root,'pwr=',pwr)
+            print('success')
+            break
+        else:
+            print('root=',root,'pwr=',pwr)
+            print('failure')
+            break
 
-if pwr > 0 and pwr < 6 and root*pwr == num:
-    print('success')
-else:
-    print('failure')
+        pwr = pwr + 1
